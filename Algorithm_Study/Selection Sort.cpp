@@ -1,8 +1,8 @@
 #include<stdio.h>
-#define N 100
+#define N 11
 
 int main() {
-	int data[N];
+	int data[N] = {8, 31, 48, 73, 3, 65, 20, 29, 11, 15};
 
 	selectionSort(data, N);
 

@@ -1,11 +1,11 @@
 #include<stdio.h>
-#define N 11
+#define N 10
 
 int theLargest(int data[], int last) {	//가장 큰 수의 인덱스 반환
-	int largeIndex = last;
+	int largeIndex = 0;
 	for (int i = 0; i < last; i++) {
-		if (data[last] > data[largeIndex]) {
-			largeIndex = last;
+		if (data[i] > data[largeIndex]) {
+			largeIndex = i;
 		}
 	}
 	return largeIndex;
@@ -29,6 +29,10 @@ int selectionSort(int data[], int n) {	//선택정렬 실행
 
 int main() {
 	int data[N] = { 8, 31, 48, 73, 3, 65, 20, 29, 11, 15 };
+
+	//for (int i = 0; i < N; i++)
+	//	printf("%d ", data[i]);
+	//printf("\n");
 
 	if (selectionSort(data, N) == 1) {
 		for (int i = 0; i < N; i++)
